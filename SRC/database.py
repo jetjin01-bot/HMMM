@@ -2,9 +2,19 @@ from pathlib import Path
 import sqlite3
 
 
-# Project paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATABASE_PATH = PROJECT_ROOT / "data" / "processed" / "knowledge.db"
+
+DATABASE_PATH = (
+    PROJECT_ROOT
+    / "data"
+    / "processed"
+    / "knowledge.db"
+)
+
+DATABASE_PATH.parent.mkdir(
+    parents=True,
+    exist_ok=True,
+)
 
 
 def get_connection():
