@@ -1,0 +1,8 @@
+.idea/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+data/processed/knowledge.db
